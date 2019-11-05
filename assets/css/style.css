@@ -1,19 +1,66 @@
+@font-face {
+  font-family: 'bellota';
+  src: url("/hackers-poulette/assets/font/bellota/Bellota-Bold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bellota-regular';
+  src: url("/hackers-poulette/assets/font/bellota/Bellota-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (min-width: 200px) and (max-width: 972px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .top-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .top-container img {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  font-family: 'bellota';
+  padding: 0px;
+  margin: 0px;
 }
 
 body .top-container h1 {
   text-align: center;
+  font-size: 3rem;
+  padding: 0px;
 }
 
 body .container {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+  margin: 30px;
+  border: 1px solid #15c5bd;
 }
 
 body .container .red {
@@ -31,25 +78,32 @@ body .container select,
 body .container textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #15c5bd;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
+  font-family: 'bellota-regular';
+}
+
+body .container select:hover,
+body .container input[type=radio]:hover {
+  cursor: pointer;
 }
 
 body .container input[type=submit] {
   background-color: #15c5bd;
-  color: white;
+  color: black;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-family: 'bellota';
 }
 
 body .container input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #15c5bc85;
 }
 /*# sourceMappingURL=style.css.map */

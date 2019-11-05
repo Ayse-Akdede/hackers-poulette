@@ -1,11 +1,46 @@
+@font-face {
+    font-family: 'bellota';
+    src: url("/hackers-poulette/assets/font/bellota/Bellota-Bold.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bellota-regular';
+    src: url("/hackers-poulette/assets/font/bellota/Bellota-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (min-width: 200px) and (max-width: 972px) {
+    body {
+        display: flex;
+        flex-direction: column;
+
+        .top-container {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                align-self: center;
+            }
+        }
+    }
+}
+
 body {
     box-sizing: border-box;
     display: inline-flex;
+    font-family: 'bellota';
+    padding: 0px;
+    margin: 0px;
+
 
     .top-container {
         h1 {
             text-align: center;
-
+            font-size: 3rem;
+            padding: 0px;
         }
     }
 
@@ -13,6 +48,8 @@ body {
         border-radius: 5px;
         background-color: #f2f2f2;
         padding: 20px;
+        margin: 30px;
+        border: 1px solid #15c5bd;
 
         .red {
             background-color: red;
@@ -25,33 +62,40 @@ body {
 
         }
 
-
         input[type=text],
         select,
         textarea {
             width: 100%;
             padding: 12px;
-            border: 1px solid #ccc;
+            border: 1px solid #15c5bd;
             border-radius: 4px;
             box-sizing: border-box;
             margin-top: 6px;
             margin-bottom: 16px;
             resize: vertical;
+            font-family: 'bellota-regular';
+        }
+
+        select,
+        input[type=radio] {
+            &:hover {
+                cursor: pointer;
+            }
         }
 
         input[type=submit] {
             background-color: #15c5bd;
-            color: white;
+            color: black;
             padding: 12px 20px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            font-family: 'bellota';
 
             &:hover {
-                background-color: #45a049;
+                background-color: #15c5bc85;
             }
         }
-
 
     }
 
